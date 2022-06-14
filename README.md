@@ -1,9 +1,9 @@
-# The implementation of Alphuzz++
+# The implementation of AlphaFuzz++
 We implement this prototype of our approach on top of AFL++ 3.14a. 
 
 **Changes for data structure.** 
 
-We changed the queue structure of AFL++ into a tree structure. Specifically, we construct a seed mutation tree during fuzzing process based on the mutation relationships among seeds. For example, if Alphuzz mutates seed A and generates a new seed B. If seed B is an interesting input, we add it to the tree as a child node of A.
+We changed the queue structure of AFL++ into a tree structure. Specifically, we construct a seed mutation tree during fuzzing process based on the mutation relationships among seeds. For example, if AlphaFuzz mutates seed A and generates a new seed B. If seed B is an interesting input, we add it to the tree as a child node of A.
 
 **Changes for seed scheduling strategy.** 
 
@@ -31,7 +31,7 @@ sudo apt-get install -y build-essential python3-dev automake git flex bison libg
 # try to install llvm 11 and install the distro default if that fails
 sudo apt-get install -y lld-11 llvm-11 llvm-11-dev clang-11 || sudo apt-get install -y lld llvm llvm-dev clang 
 sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/.* //'|sed 's/\..*//')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/.* //'|sed 's/\..*//')-dev
-cd Alphuzzplusplus
+cd AlphaFuzzplusplus
 make distrib
 sudo make install
 ```

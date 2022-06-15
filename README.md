@@ -16,10 +16,6 @@ We leverage the UCT algorithm to calculate the score of seed. **Formula 1** show
 
 ![](formula.png)
 
-**Algorithm 2** shows the details of implementation.
-
-![](algorithm2.png)
-
 # Installation instructions
 
 The installation is the same as AFL++.
